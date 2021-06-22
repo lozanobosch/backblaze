@@ -1,0 +1,21 @@
+Let ( [
+_ref=$$__gtxt;
+_sep="----";
+_lon=Length(_sep)+1;
+_q="";
+_q="";
+ _contador = 3;
+_ini= If ( _contador=1 ; 1; Position ( _ref ; _sep ; 1 ; _contador-1)+_lon);
+_end = Position ( _ref ; _sep ; 1 ; _contador );
+_st= Middle ( _ref ; _ini ; _end -_ini );
+_valor= Middle ( _ref ; _ini ; _end -_ini -1);
+_name= Left ( _valor ; Position ( _valor ; ":" ; 1 ; 1 ) -1);
+_valor=Substitute ( _valor ; _name & ":" ; "" );
+_valor=Right ( _valor ; Length ( _valor )-1 );
+_txt="$$__"  & _name &" = "  & "\"" & _valor  & "\"";
+_g=Evaluate ( 
+"Let ( " & _txt & 
+" ; \"\" ) " 
+)
+
+]; "")
