@@ -1,4 +1,4 @@
-curl:
+xtcurl:
 -X GET 
 -H "Content-Type: application/json"
 -H "Authorization: {{key}}" 
