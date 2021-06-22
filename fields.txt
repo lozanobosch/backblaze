@@ -7,27 +7,3 @@ curl:
 parrafo:
 Este es cualquier parrafo
 ----
-base:
-Let ( [
-
-_r=
-
-While ( 
-[ 
- _total = PatternCount($$__txt;"----"); 
-  _resultado = ""; 
-  $$_contador = 0 
-] ;
-
-$$_contador < _total ; 
-
-[ 
-  $$_contador = $$_contador + 1 ;
-Evaluate ($$__parser)
-] ; 
-_resultado
-
- )
-]; ""
- )
- ----
