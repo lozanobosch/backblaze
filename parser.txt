@@ -1,10 +1,10 @@
 Let ( [
-_ref=$$__gtxt;
+_ref=$$__txt;
 _sep="----";
 _lon=Length(_sep)+1;
 _q="";
 _q="";
- _contador = 3;
+ _contador = $$_contador;
 _ini= If ( _contador=1 ; 1; Position ( _ref ; _sep ; 1 ; _contador-1)+_lon);
 _end = Position ( _ref ; _sep ; 1 ; _contador );
 _st= Middle ( _ref ; _ini ; _end -_ini );
