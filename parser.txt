@@ -11,7 +11,7 @@ _name= Left ( _valor ; Position ( _valor ; ":" ; 1 ; 1 ) -1);
 _valor=Substitute ( _valor ; _name & ":" ; "" );
 _valor=Right ( _valor ; Length ( _valor )-1 );
 _res=Let ( [
-   expression = "Let ( $$" & _name & " = " & Quote ( _valor )  & "; 0 )"
+   expression = "Let ( $$__" & _name & " = " & Quote ( _valor )  & "; 0 )"
    ] ; 
    Evaluate ( expression )
 )        
