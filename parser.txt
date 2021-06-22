@@ -2,7 +2,7 @@ Let ( [
 _ref=$$__txt;
 _sep="----";
 _lon=Length(_sep)+1;
- _contador = 1;
+ _contador = $contador;
 _ini= If ( _contador>1 ; Position ( _ref ; _sep ; 1 ; _contador-1)+_lon;1);
 _end = Position ( _ref ; _sep ; 1 ; _contador );
 _st= Middle ( _ref ; _ini ; _end -_ini );
