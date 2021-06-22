@@ -4,9 +4,6 @@ curl:
 -H "Authorization: {{key}}" 
 -S
 ----
-parrafo:
-Este es cualquier parrafo
-----
-codigo:
-Cap codigo interesante
+URL:
+https://api.backblazeb2.com/b2api/v2/b2_authorize_account
 ----
