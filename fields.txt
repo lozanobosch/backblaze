@@ -19,3 +19,12 @@ $$__cURL= Substitute ( $$__code ; "{{key}}" ; $$_key )
 
 ]; 0 )
 ----
+respuesta:
+Let ( [
+$$_apiURL= JSONGetElement ( $$_resp ; "apiUrl" );
+$$_authToken= JSONGetElement ( $$_resp ; "authorizationToken" );
+$$_downURL= JSONGetElement ( $$_resp ; "downloadUrl" );
+$$_authTS= Get ( CurrentTimestamp )
+
+]; "" )
+----
