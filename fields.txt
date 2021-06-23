@@ -16,7 +16,6 @@ _b64= Base64Encode ( $$_bbID & ":" & $$_appKey );
 $$_key= "Basic " & Left ( _b64; Length ( _b64 ) - 1 );
 $$__cURL= Substitute ( $$__code ; "{{key}}" ; $$_key )
 
-
 ]; 0 )
 ----
 respuesta:
@@ -27,4 +26,18 @@ $$_downURL= JSONGetElement ( $$_resp ; "downloadUrl" );
 $$_authTS= Get ( CurrentTimestamp )
 
 ]; "" )
+----
+upload:
+Let ( [
+$$_upURL= $$_apiURL & "/b2api/v2/b2_get_upload_url";
+$$_upRequest=JSONSetElement ( "{}" ; "bucketId" ; $$_bucketID ; JSONString );
+
+]; "" )
+----
+upcurl:
+-X POST 
+-H "Content-Type: application/json"
+-H "Authorization: {{authToken}} " 
+-d @{{request}}
+-S 
 ----
