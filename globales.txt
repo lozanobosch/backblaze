@@ -6,17 +6,25 @@ While (
 [ 
  _total = PatternCount($$__txt;"----"); 
   _resultado = ""; 
-  $$_contador = 0 
+  _contador = 0 
 ] ;
 
-$$_contador < _total ; 
+_contador < _total ; 
 
 [ 
- $$_contador = $$_contador + 1 ;
-Evaluate ($$__parser)
+ _contador = _contador + 1 ;
+_nil=Let ( [
+   expression = $$__parser
+   ] ; 
+   Evaluate ( expression )
+) 
 ] ; 
 _resultado
 
  )
-]; ""
+]; Let ( [
+   expression = $$__claves
+   ] ; 
+   Evaluate ( expression )
+)  
  )
