@@ -4,6 +4,13 @@ code:
 -H "Authorization: {{key}}" 
 -S
 ----
+upcode:
+-X POST 
+-H "Content-Type: application/json"
+-H "Authorization: {{authToken}} " 
+-d @{{request}}
+-S 
+----
 URL:
 https://api.backblazeb2.com/b2api/v2/b2_authorize_account
 ----
@@ -23,21 +30,9 @@ Let ( [
 $$_apiURL= JSONGetElement ( $$_resp ; "apiUrl" );
 $$_authToken= JSONGetElement ( $$_resp ; "authorizationToken" );
 $$_downURL= JSONGetElement ( $$_resp ; "downloadUrl" );
-$$_authTS= Get ( CurrentTimestamp )
-
-]; "" )
-----
-upload:
-Let ( [
+$$_authTS= Get ( CurrentTimestamp );
 $$_upURL= $$_apiURL & "/b2api/v2/b2_get_upload_url";
 $$_upRequest=JSONSetElement ( "{}" ; "bucketId" ; $$_bucketID ; JSONString );
 
 ]; "" )
-----
-upcurl:
--X POST 
--H "Content-Type: application/json"
--H "Authorization: {{authToken}} " 
--d @{{request}}
--S 
 ----
