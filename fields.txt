@@ -77,7 +77,10 @@ $$_uploadFileID= JSONGetElement ( $$_upFileResp ; "fileId" )
 
 ]; "" )
 ----
+download:
+Let ( [
+$$_downURL= $$_downURL & "/b2api/v2/b2_download_file_by_id?fileId=" & $fileID;
+$$_downcURL=Substitute ( $$__downcode; "{{authToken}}" ; $$_authToken )
 
-
-
-
+]; "" )
+----
