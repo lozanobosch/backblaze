@@ -11,6 +11,15 @@ upcode:
 -d @$$_upRequest
 -S 
 ----
+uploadFilecURL:
+-X POST 
+-H "Authorization: {{uploadAuthToken}}"
+-H "X-Bz-File-Name: {{fileNameEncoded}}"
+-H "Content-Type: b2/x-auto"
+-H "X-Bz-Content-Sha1: {{sha1}}"
+-H "X-Bz-Info-Author: unknown"
+--data-binary @$$_container
+----
 URL:
 https://api.backblazeb2.com/b2api/v2/b2_authorize_account
 ----
@@ -43,5 +52,15 @@ $$_uploadURL= JSONGetElement ( $$_upResp ; "uploadURL" );
 $$_upAuthToken= JSONGetElement ( $$_upResp ; "authorizationToken" );
 $$_upAuthTS=Get ( CurrentTimestamp )
 
+]; "" )
+----
+upData:
+Let ( [
+$$_container= GetField ( $$_reference );
+$$_filename= GetContainerAttribute ( GetField ( $$_reference ); "filename" );
+$$_fileNameEncoded= GetAsURLEncoded ( $$_fileName );
+$$_sha1= HexEncode ( CryptDigest (GetField ( $$_reference ) ; "SHA1" ) );
+$$_error="";
+$$_upFilecURL= Substitute ($$_upFilecURL= Substitute ( uploadFilecURL; ["{{uploadAuthToken}}" ; $$_upAuthToken];["{{fileNameEncoded}}" ; $$_fileNameEncoded];["{{sha1}}" ; $$_sha1] )
 ]; "" )
 ----
