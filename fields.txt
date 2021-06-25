@@ -15,8 +15,8 @@ downcode:
 -X GET  
 -H "Authorization: {{authToken}}"
 --dump-header $header 
--S 
----
+-S
+----
 uploadFilecURL:
 -X POST 
 -H "Authorization: {{uploadAuthToken}}"
