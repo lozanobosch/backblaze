@@ -28,6 +28,7 @@ Let ( [
 $$_bbID=GetValue ( $$_ls ; 1 );
 $$_appKey=GetValue ( $$_ls ; 2 );
 $$_bucketID=GetValue ( $$_ls ; 3 );
+$$_reference=GetValue ( $$_ls ; 4 );
 _b64= Base64Encode ( $$_bbID & ":" & $$_appKey );
 $$_key= "Basic " & Left ( _b64; Length ( _b64 ) - 1 );
 $$__cURL= Substitute ( $$__code ; "{{key}}" ; $$_key )
