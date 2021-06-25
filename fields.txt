@@ -33,7 +33,7 @@ $$_downURL= JSONGetElement ( $$_resp ; "downloadUrl" );
 $$_authTS= Get ( CurrentTimestamp );
 $$_upURL= $$_apiURL & "/b2api/v2/b2_get_upload_url";
 $$_upRequest=JSONSetElement ( "{}" ; "bucketId" ; $$_bucketID ; JSONString );
-$$_upcURL=Substitute ( $$_upcode; ["{{authToken}}" ; $$_authToken ];["{{request}}" ; $$_upRequest] )
+$$_upcURL=Substitute ( $$__upcode; ["{{authToken}}" ; $$_authToken ];["{{request}}" ; $$_upRequest] )
 
 ]; "" )
 ----
