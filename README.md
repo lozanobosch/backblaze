@@ -5,3 +5,11 @@ Los componentes FMx se caracterizan por cargar las funciones necesarias desde un
 
 ## Modo de uso
 Abrir el único script que tiene el fichero e introducir vuestras credenciales de Backblaze
+
+----------------
+# FMx Backblaze
+Allows you to use the BackBlaze API to manage files using this cloud storage service. Saving files off the FileMaker server makes database migration easier and optimizes system resources
+## About FMx components
+FMx components load the necessary functions from an external text file, hosted in a public GitHub repository. They look for the maximum functionality with the minimum possible code in Filemaker
+## How to use
+Open the only script that has the file and enter your Backblaze credentials. Volià. Done
