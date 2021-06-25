@@ -65,3 +65,13 @@ $$_error="";
 $$_upFilecURL= Substitute ($$_upFilecURL= Substitute ( uploadFilecURL; ["{{uploadAuthToken}}" ; $$_upAuthToken];["{{fileNameEncoded}}" ; $$_fileNameEncoded];["{{sha1}}" ; $$_sha1] )
 ]; "" )
 ----
+upFileResultado:
+Let ( [
+$$_uploadFileID= JSONGetElement ( $$_upFileResp ; "fileId" )
+
+]; "" )
+----
+
+
+
+
