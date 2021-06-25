@@ -49,7 +49,7 @@ $$_upcURL=Substitute ( $$__upcode; "{{authToken}}" ; $$_authToken )
 ----
 upRespuesta:
 Let ( [
-$$_uploadURL= JSONGetElement ( $$_upResp ; "uploadURL" );
+$$_uploadURL= JSONGetElement ( $$_upResp ; "uploadUrl" );
 $$_upAuthToken= JSONGetElement ( $$_upResp ; "authorizationToken" );
 $$_upAuthTS=Get ( CurrentTimestamp )
 
