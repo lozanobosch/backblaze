@@ -12,4 +12,4 @@ Allows you to use the BackBlaze API to manage files using this cloud storage ser
 ## About FMx components
 FMx components load the necessary functions from an external text file, hosted in a public GitHub repository. They look for the maximum functionality with the minimum possible code in Filemaker
 ## How to use
-Open the only script that has the file and enter your Backblaze credentials. Volià. Done
+Open the only script that has the file and enter your Backblaze credentials. Voilà. Done
