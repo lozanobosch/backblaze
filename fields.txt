@@ -8,7 +8,7 @@ upcode:
 -X POST 
 -H "Content-Type: application/json"
 -H "Authorization: {{authToken}} " 
--d @{{request}}
+-d @$$_upRequest
 -S 
 ----
 URL:
