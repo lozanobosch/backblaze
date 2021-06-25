@@ -11,6 +11,12 @@ upcode:
 -d @$$_upRequest
 -S 
 ----
+downcode:
+-X GET  
+-H "Authorization: {{authToken}}"
+--dump-header $header 
+-S 
+---
 uploadFilecURL:
 -X POST 
 -H "Authorization: {{uploadAuthToken}}"
