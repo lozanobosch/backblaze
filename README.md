@@ -9,7 +9,7 @@ Los componentes FMx se caracterizan por cargar las funciones necesarias desde un
 
 ## FAQs
 ### Como funciona?
-Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas **$$_text** y **$$_parser** respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
+Hay dos ficheros de texto: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas **$$_text** y **$$_parser** respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
 
 ![image](https://user-images.githubusercontent.com/3072343/123543422-aa543b80-d74e-11eb-8340-19cfef20a835.png)
 
