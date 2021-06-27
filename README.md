@@ -13,7 +13,7 @@ Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el scri
 
 ![image](https://user-images.githubusercontent.com/3072343/123543422-aa543b80-d74e-11eb-8340-19cfef20a835.png)
 
-Una vez ejecutado este paso lo único que hacemos es evaluar - cuando es necesario- estas funciones y ejecutar el cURL con la función nativa de Filemaker.
+Una vez ejecutado este paso lo único que hacemos es evaluar - cuando es necesario- estas funciones y ejecutar el cURL con la función nativa de Filemaker.  
 El botón **upload** tiene **dos parámetros**: el primero es la función a ejecutar y el segundo fuerza de nuevo la autentificación si tiene algún valor. El botón **download** agrega a los parámetros del botón de upload, **dos adicionales**: el primero con el id y el segundo con el nombre.
 ### Que ventajas tiene?
 Es casi imposible encontrar integraciones o addons que no agreguen multiples tablas funciones personalizadas, campos y multiples scripts para incorporar cualquier funcionalidad, ya sea integrar una API o una solución que use el web viewer. Esto __complica artificialmente la legibilidad de una solución__. lo que buscamos es __simplificar al máximo__ lo necesario. En este caso hemos hecho un refactoring de una solución que usaba 5 scripts,400 líneas de código, 2 tablas y 41 campos, y lo hemos reducido a __un sólo script__ con 40 líneas, 1 tabla y 10 campos. Y cumple las premisas básicas de __externalizar el código__, hacerlo __legible__ y __facilitar el uso de cURL__ escribiéndolo de forma simple, sin necesidad de escapar comillas.
@@ -32,7 +32,7 @@ There are two text files: __fields.txt__ and __parser.txt__. When executing the 
 
 ![image](https://user-images.githubusercontent.com/3072343/123543422-aa543b80-d74e-11eb-8340-19cfef20a835.png)
 
-Once this step is executed, all we do is evaluate - when necessary - these functions and execute the cURL with the native Filemaker function.
+Once this step is executed, all we do is evaluate - when necessary - these functions and execute the cURL with the native Filemaker function.  
 The ** upload ** button has **two parameters**: the first is the function to be executed and the second forces authentication again if they have any value. The **download** button adds **two additional** to the upload button parameters: the first with the id and the second with the name.
 ### What advantages does it have?
 It is almost impossible to find integrations or addons that do not add multiple tables, custom functions, fields, and multiple scripts to incorporate any functionality. This __artificially complicates the readability of a solution__. what we seek is to __simplify as much as possible__ what is necessary. In this case we have done a refactoring of a solution that used 5 scripts, 400 lines of code, 2 tables and 41 fields, and we have reduced it to __one single script__ with 40 lines, 1 table and 10 fields. And it fulfills the basic premises of __externalizing the code__, making it __legible__ and __ making it easier to use cURL__ by writing it in a simple way, without the need to escape quotes.
