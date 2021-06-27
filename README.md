@@ -10,6 +10,9 @@ Los componentes FMx se caracterizan por cargar las funciones necesarias desde un
 ## FAQs
 ### Como funciona?
 Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas **$$_text** y **$$_parser** respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
+
+![image](https://user-images.githubusercontent.com/3072343/123543260-e33fe080-d74d-11eb-92fa-a3f82bc37a58.png)
+
 Una vez ejecutado este paso lo único que hacemos es evaluar - cuando es necesario- estas funciones y ejecutar el cURL con la función nativa de Filemaker.
 El botón **upload** tiene **dos parámetros**: el primero es la función a ejecutar y el segundo fuerza de nuevo la autentificación si tiene algún valor. El botón **download** agrega a los parámetros del botón de upload, **dos adicionales**: el primero con el id y el segundo con el nombre.
 ### Que ventajas tiene?
