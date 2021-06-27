@@ -14,7 +14,6 @@ Una vez ejecutado este paso lo único que evaluar - cuando es necesario- estas f
 ### Que ventajas tiene?
 Es casi imposible encontrar integraciones o addons que no agreguen multiples tablas funciones personalizadas, campos y multiples scripts para incorporar cualquier funcionalidad, ya sea integrar una API o una solución que use el web viewer. Esto __complica artificialmente la legibilidad de una solución__. lo que buscamos es __simplificar al máximo__ lo necesario. En este caso hemos hecho un refactoring de una solución que usaba 5 scripts,400 líneas de código, 2 tablas y 41 campos, y lo hemos reducido a __un sólo script__ con 40 líneas, 1 tabla y 10 campos. Y cumple las premisas básicas de __externalizar el código__, hacerlo __legible__ y __facilitar el uso de cURL__ escribiéndolo de forma simple, sin necesidad de escapar comillas.
 
-
 ----------------
 # FMx Backblaze
 Allows you to use the BackBlaze API to manage files using this cloud storage service. Saving files off the FileMaker server makes database migration easier and optimizes system resources
