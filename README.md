@@ -11,7 +11,7 @@ Los componentes FMx se caracterizan por cargar las funciones necesarias desde un
 ### Como funciona?
 Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas **$$_text** y **$$_parser** respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
 
-![image](https://user-images.githubusercontent.com/3072343/123543260-e33fe080-d74d-11eb-92fa-a3f82bc37a58.png)
+![image](https://user-images.githubusercontent.com/3072343/123543422-aa543b80-d74e-11eb-8340-19cfef20a835.png)
 
 Una vez ejecutado este paso lo único que hacemos es evaluar - cuando es necesario- estas funciones y ejecutar el cURL con la función nativa de Filemaker.
 El botón **upload** tiene **dos parámetros**: el primero es la función a ejecutar y el segundo fuerza de nuevo la autentificación si tiene algún valor. El botón **download** agrega a los parámetros del botón de upload, **dos adicionales**: el primero con el id y el segundo con el nombre.
@@ -29,6 +29,9 @@ Open the only script that has the file and enter your Backblaze credentials. Voi
 ## FAQs
 ### How does it work?
 There are two text files: __fields.txt__ and __parser.txt__. When executing the script, both are loaded as global variables called **$$ _text** and **$$__parser** respectively. Then we set a variable that __evalues__ each item in the text file and turns it into a global variable. These variables can be __templates__ or __functions__.
+
+![image](https://user-images.githubusercontent.com/3072343/123543422-aa543b80-d74e-11eb-8340-19cfef20a835.png)
+
 Once this step is executed, all we do is evaluate - when necessary - these functions and execute the cURL with the native Filemaker function.
 The ** upload ** button has **two parameters**: the first is the function to be executed and the second forces authentication again if they have any value. The **download** button adds **two additional** to the upload button parameters: the first with the id and the second with the name.
 ### What advantages does it have?
