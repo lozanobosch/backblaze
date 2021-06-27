@@ -9,7 +9,7 @@ Los componentes FMx se caracterizan por cargar las funciones necesarias desde un
 
 ## FAQs
 ### Como funciona?
-Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas __$$_text__ y __$$_parser__ respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
+Hay dos ficheros de textos: __fields.txt__ y __parser.txt__. Al ejecutar el script se cargan ambos como variables globales llamadas **$$_text** y **$$_parser** respectivamente. Luego establecemos una variable que __evalua__ cada item en el fichero de texto y lo convierte en una variable global. Estas variables pueden ser __plantillas__ o __funciones__.
 Una vez ejecutado este paso lo único que evaluar - cuando es necesario- estas funciones y ejecutar el cURL con la función nativa de Filemaker.
 ### Que ventajas tiene?
 Es casi imposible encontrar integraciones o addons que no agreguen multiples tablas funciones personalizadas, campos y multiples scripts para incorporar cualquier funcionalidad, ya sea integrar una API o una solución que use el web viewer. Esto __complica artificialmente la legibilidad de una solución__. lo que buscamos es __simplificar al máximo__ lo necesario. En este caso hemos hecho un refactoring de una solución que usaba 5 scripts,400 líneas de código, 2 tablas y 41 campos, y lo hemos reducido a __un sólo script__ con 40 líneas, 1 tabla y 10 campos. Y cumple las premisas básicas de __externalizar el código__, hacerlo __legible__ y __facilitar el uso de cURL__ escribiéndolo de forma simple, sin necesidad de escapar comillas.
@@ -24,7 +24,7 @@ Open the only script that has the file and enter your Backblaze credentials. Voi
 
 ## FAQs
 ### How does it work?
-There are two text files: __fields.txt__ and __parser.txt__. When executing the script, both are loaded as global variables called __ $$ _ text__ and __ $$ _ parser__ respectively. Then we set a variable that __evalues__ each item in the text file and turns it into a global variable. These variables can be __templates__ or __functions__.
+There are two text files: __fields.txt__ and __parser.txt__. When executing the script, both are loaded as global variables called **$$ _text** and **$$__parser** respectively. Then we set a variable that __evalues__ each item in the text file and turns it into a global variable. These variables can be __templates__ or __functions__.
 Once this step is executed, all we do is evaluate - when necessary - these functions and execute the cURL with the native Filemaker function.
 ### What advantages does it have?
 It is almost impossible to find integrations or addons that do not add multiple tables, custom functions, fields, and multiple scripts to incorporate any functionality. This __artificially complicates the readability of a solution__. what we seek is to __simplify as much as possible__ what is necessary. In this case we have done a refactoring of a solution that used 5 scripts, 400 lines of code, 2 tables and 41 fields, and we have reduced it to __one single script__ with 40 lines, 1 table and 10 fields. And it fulfills the basic premises of __externalizing the code__, making it __legible__ and __ making it easier to use cURL__ by writing it in a simple way, without the need to escape quotes.
